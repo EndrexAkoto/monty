@@ -64,8 +64,8 @@ int get_numbase_len(unsigned int num, unsigned int base)
 
 	while (num > base - 1)
 {
-	    len++;
-	    num /= base;
+	len++;
+	num /= base;
 }
 return (len);
 }
@@ -86,14 +86,14 @@ char *buff, int buff_size)
 	int rem, i = buff_size - 1;
 
 	buff[buff_size] = '\0';
-while (i >= 0)
+	while (i >= 0)
 {
-	    rem = num % base;
+	rem = num % base;
 	if (rem > 9) /* return lowercase ASCII val representation */
-		    buff[i] = rem + 87; /* 10 will be a, 11 = b, ... */
+		buff[i] = rem + 87; /* 10 will be a, 11 = b, ... */
 	else
-		    buff[i] = rem + '0';
-	    num /= base;
+		buff[i] = rem + '0';
+	num /= base;
 	i--;
 }
 }

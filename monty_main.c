@@ -3,8 +3,6 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
-char **op_toks = NULL;
-
 /**
  * main - entry point for Monty Interp
  *

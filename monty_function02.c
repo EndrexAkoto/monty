@@ -26,7 +26,7 @@ void monty_pchar(stack_t **stack, unsigned int line_number)
 	if ((*stack)->next == NULL)
 {
 	set_op_tok_error(pchar_error(line_number, "stack empty"));
-	return;
+
 }
 if ((*stack)->next->n < 0 || (*stack)->next->n > 127)
 set_op_tok_error(pchar_error(line_number,
@@ -46,13 +46,12 @@ void monty_pstr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp = (*stack)->next;
 
-    while (tmp && tmp->n != 0 && (tmp->n > 0 && tmp->n <= 127))
+	while (tmp && tmp->n != 0 && (tmp->n > 0 && tmp->n <= 127))
 {
-        printf("%c", tmp->n);
-        tmp = tmp->next;}
+	printf("%c", tmp->n);
+	tmp = tmp->next; }
+	printf("\n");
 
-printf("\n");
-
-(void)line_number;
+	(void)line_number;
 }
 
