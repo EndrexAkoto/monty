@@ -45,7 +45,7 @@ if ((*stack)->next == NULL || (*stack)->next->next == NULL)
 
 top = (*stack)->next;
 bottom = (*stack)->next;
-while (bottom->next != NULL;
+while (bottom->next != NULL);
 		bottom = bottom->next;
 
 		bottom->prev->next = NULL;
