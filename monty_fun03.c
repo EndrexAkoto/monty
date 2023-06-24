@@ -40,11 +40,11 @@ void monty_rotr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *top, *bottom;
 
-if ((*stack)->next == NULL || (*stack)->next->next == NULL)
+	if ((*stack)->next == NULL || (*stack)->next->next == NULL)
 	return;
 
-top = (*stack)->next;
-bottom = (*stack)->next;
+	top = (*stack)->next;
+	bottom = (*stack)->next;
 	while (bottom->next != NULL)
 		bottom = bottom->next;
 
@@ -54,7 +54,7 @@ bottom = (*stack)->next;
 		bottom->next = top;
 		top->prev = bottom;
 
-(void)line_number;
+	(void)line_number;
 }
 
 /**
