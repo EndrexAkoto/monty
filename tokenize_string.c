@@ -107,7 +107,7 @@ int get_word_length(char *str, char *delims)
 }
 	if (wLen > 0 && is_delim(str[i], delims))
 	break;
-	i ++;
+	i++;
 }
 return (wLen);
 }

@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 
-int exit_status = EXIT_SUCCESS;
+
 
 void free_tokens(void);
 int run_monty(FILE *script_fd);
@@ -166,6 +166,6 @@ if (line && *line == 0)
 
 exit_status = malloc_error();
 free_tokens();
-	return exit_status;
+	return (exit_status);
 }
 
