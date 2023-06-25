@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdio.h>
 
+int exit_status = EXIT_SUCCESS;
+
 void free_tokens(void);
 int run_monty(FILE *script_fd);
 void (*get_op_func(char *opcode))(stack_t**, unsigned int);
@@ -161,10 +163,9 @@ free_tokens();
 free_stack(&stack);
 
 if (line && *line == 0)
-{
-	int exit_status = malloc_error();
+
+exit_status = malloc_error();
 free_tokens();
 	return exit_status;
-}
 }
 
