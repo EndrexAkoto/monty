@@ -1,5 +1,6 @@
 #include "monty.h"
 #include <string.h>
+#include <stdio.h>
 
 void free_tokens(void);
 int run_monty(FILE *script_fd);
@@ -112,14 +113,15 @@ int run_monty(FILE *script_fd)
 {
 	stack_t *stack = NULL;
 	char *line = NULL;
-	size_t len = 0, exit_status = EXIT_SUCCESS;
+	size_t len = 0;
+	int exit_status = EXIT_SUCCESS;
 	unsigned int line_number = 0, prev_tok_len = 0;
 	void (*op_func)(stack_t**, unsigned int);
 
 	if (init_stack(&stack) == EXIT_FAILURE)
 		return (EXIT_FAILURE);
 
-	while (getline(&line, &len, script_fd) != -1)
+	while (fgets(line, len, script_fd) != NULL)
 {
 	line_number++;
 	op_toks = strtow(line, DELIMS);
@@ -160,10 +162,9 @@ free_stack(&stack);
 
 if (line && *line == 0)
 {
-	free(linereturn(malloc_error());
-}
-
+	int exit_status = malloc_error();
 free_tokens();
-return (exit_status);
+	return exit_status;
+}
 }
 
