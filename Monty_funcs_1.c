@@ -62,7 +62,6 @@ new->n = atoi(op_toks[1]);
 }
 }
 
-
 /**
  * monty_pall - Prints values of stack_t linked list
  * @stack: pointer to the top mode node of a stack_t linked list

@@ -92,5 +92,7 @@ int pint_error(unsigned int line_number);
 int pchar_error(unsigned int line_number, char *message);
 int div_error(unsigned int line_number);
 
+char **op_toks;
+
 #endif
 
