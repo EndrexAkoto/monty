@@ -41,7 +41,7 @@ int f_open_error(char *filename)
 }
 
 /**
- * unknown_op_error : Prints unknown instruction error messages
+ * unknown_op_error - Prints unknown instruction error messages.
  * @opcode: Opcode where error occurred
  * @line_number: Line number in Monty bytecodes file where error occured
  *
